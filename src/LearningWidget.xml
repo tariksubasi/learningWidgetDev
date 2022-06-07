@@ -13,7 +13,9 @@
     <description>My widget description</description>
     <icon />
     <properties>
-        <propertyGroup caption="Something">
+        <propertyGroup caption="Static">
+            <!-- Static Widget Types -->
+
             <!-- 1. Static String -->
 
             <property key="staticStr" type="string" required="false" defaultValue="My Default...">
@@ -67,7 +69,17 @@
                     <enumerationValue key="blue">Blue</enumerationValue>
                 </enumerationValues>
             </property>
+        </propertyGroup>
+
+        <propertyGroup caption="Component">
+            <!-- Component Widget Types -->
+
+            <!-- 1. Icon -->
             
+            <property key="icon" type="icon" required="false">
+                <caption>Icon</caption>
+                <description>Icon Description</description>
+            </property>
         </propertyGroup>
     </properties>
 </widget>
