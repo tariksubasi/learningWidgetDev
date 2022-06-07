@@ -4,6 +4,6 @@ import "./ui/LearningWidget.css";
 export function LearningWidget(props) {
     console.log("props", props);
 
-    const { sampleText } = props;
-    return <div>{sampleText}</div>;
+    const { staticStr } = props;
+    return <div>{staticStr}</div>;
 }

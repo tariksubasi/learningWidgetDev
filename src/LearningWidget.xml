@@ -1,17 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
-<widget id="mendix.learningwidget.LearningWidget" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
-        supportedPlatform="Web"
-        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="mendix.learningwidget.LearningWidget"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
     <name>Learning Widget</name>
     <description>My widget description</description>
-    <icon/>
+    <icon />
     <properties>
         <propertyGroup caption="Something">
-            <property key="sampleText" type="string" required="false">
-                <caption>Default value</caption>
-                <description>Sample text input</description>
+            <!-- 1. Static String -->
+
+            <property key="staticStr" type="string" required="false" defaultValue="My Default...">
+                <caption>Static String</caption>
+                <description>Static String Description</description>
             </property>
+
+            <!-- 2. Static Multiline String -->
+
+            <property
+                key="staticMultilineStr"
+                type="string"
+                multiline="true"
+                required="false"
+                defaultValue="My Default..."
+            >
+                <caption>Static Multiline String</caption>
+                <description>Static Multiline String Description</description>
+            </property>
+
+            <!-- 3. Static Boolean -->
+
+            <property key="staticBool" type="boolean" defaultValue="false">
+                <caption>Static Boolean</caption>
+                <description>Static Boolean Description</description>
+            </property>
+
+            <!-- 4. Static Integer -->
+
+            <property key="staticInteger" type="integer" defaultValue="1000">
+                <caption>Static Integer</caption>
+                <description>Static Integer Description</description>
+            </property>
+
+            <!-- 5. Static Decimal -->
+
+            <property key="staticDecimal" type="decimal" defaultValue="1907.4">
+                <caption>Static Decimal</caption>
+                <description>Static Decimal Description</description>
+            </property>
+
+            <!-- 6. Enumeration -->
+
+            <property key="staticEnum" type="enumeration" defaultValue="red">
+                <caption>Static Enumeration</caption>
+                <description>Static Enumeration Description</description>
+
+                <enumerationValues>
+                    <enumerationValue key="red">Red</enumerationValue>
+                    <enumerationValue key="green">Green</enumerationValue>
+                    <enumerationValue key="blue">Blue</enumerationValue>
+                </enumerationValues>
+            </property>
+            
         </propertyGroup>
     </properties>
 </widget>
