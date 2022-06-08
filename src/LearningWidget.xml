@@ -132,6 +132,29 @@
                     <attributeType name="Integer" />
                 </attributeTypes>
             </property>
+
+            <!-- 5. Object -->
+
+            <property key="objectType" type="object" isList="true">
+                <caption>Object</caption>
+                <description>Object Description</description>
+                <properties>
+                    <propertyGroup caption="Object List">
+                        <property key="objectBool" type="boolean" defaultValue="false">
+                            <caption>objectBool</caption>
+                            <description>objectBool Description</description>
+                        </property>
+                        <property key="objectString" type="string" defaultValue="defaultString">
+                            <caption>objectString</caption>
+                            <description>objectString Description</description>
+                        </property>
+                        <property key="objectAction" type="action">
+                            <caption>object action</caption>
+                            <description>object action Description</description>
+                        </property>
+                    </propertyGroup>
+                </properties>
+            </property>
         </propertyGroup>
     </properties>
 </widget>

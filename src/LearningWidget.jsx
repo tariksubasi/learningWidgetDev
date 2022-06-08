@@ -11,7 +11,8 @@ export function LearningWidget(props) {
 
     const staticWidgetTypes = useGetStaticPropertyTypes(props);
     const { iconClass, imageURL, widgetContent } = useGetComponentPropertyTypes(props);
-    const { priceColor, textTemp, onChangePrice, productPrice, setPriceValue } = useGetDynamicPropertyTypes(props);
+    const { priceColor, textTemp, onChangePrice, productPrice, setPriceValue, objectType } =
+        useGetDynamicPropertyTypes(props);
 
     console.warn("iconClass", iconClass);
     return (
@@ -69,6 +70,29 @@ export function LearningWidget(props) {
                                 Change Price From Widget
                             </button>
                         </div>
+
+                        <h6>Object Type</h6>
+                        {objectType.map(object => {
+                            const { objectBool, objectString, objectAction } = object;
+                            return (
+                                <div>
+                                    <p>objectBool : {objectBool.toString()}</p>
+                                    <p>objectString : {objectString}</p>
+                                    <div>
+                                        <button
+                                            className="btn btn-primary btn-sm"
+                                            onClick={() => {
+                                                if (objectAction && objectAction.canExecute) {
+                                                    objectAction.execute();
+                                                }
+                                            }}
+                                        >
+                                            {objectString}
+                                        </button>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </Column>
                 </div>
             </div>

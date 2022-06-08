@@ -39,12 +39,17 @@ const useGetDynamicPropertyTypes = props => {
         productPrice = parseFloat(prodPrice);
     }
 
+    // Action
+
+    const { objectType } = props;
+
     return {
         priceColor,
         textTemp,
         onChangePrice,
         productPrice,
-        setPriceValue
+        setPriceValue,
+        objectType
     };
 };
 
