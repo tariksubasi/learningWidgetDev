@@ -3,6 +3,7 @@ import Column from "./components/Column";
 import useGetComponentPropertyTypes from "./hooks/useGetComponentPropertyTypes";
 import useGetDynamicPropertyTypes from "./hooks/useGetDynamicPropertyTypes";
 import useGetStaticPropertyTypes from "./hooks/useGetStaticPropertyTypes";
+import Big from "big.js";
 import "./ui/LearningWidget.css";
 
 export function LearningWidget(props) {
@@ -10,7 +11,7 @@ export function LearningWidget(props) {
 
     const staticWidgetTypes = useGetStaticPropertyTypes(props);
     const { iconClass, imageURL, widgetContent } = useGetComponentPropertyTypes(props);
-    const { priceColor, textTemp, onChangePrice, productPrice } = useGetDynamicPropertyTypes(props);
+    const { priceColor, textTemp, onChangePrice, productPrice, setPriceValue } = useGetDynamicPropertyTypes(props);
 
     console.warn("iconClass", iconClass);
     return (
@@ -52,9 +53,22 @@ export function LearningWidget(props) {
                         <h6>Attribute</h6>
                         <div>{productPrice}</div>
                         <h6>Action</h6>
-                        <button className={"btn btn-primary btn-sm"} onClick={onChangePrice}>
-                            Change Price
-                        </button>
+                        <div>
+                            <button className={"btn btn-primary btn-sm"} onClick={onChangePrice}>
+                                Change Price
+                            </button>
+                        </div>
+                        <div>
+                            <button
+                                className={"btn btn-primary btn-sm"}
+                                onClick={() => setPriceValue(new Big(Math.random() * 100))}
+                                style={{
+                                    marginTop: "5px"
+                                }}
+                            >
+                                Change Price From Widget
+                            </button>
+                        </div>
                     </Column>
                 </div>
             </div>

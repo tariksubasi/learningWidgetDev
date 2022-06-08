@@ -32,7 +32,7 @@ const useGetDynamicPropertyTypes = props => {
     // Attribute
     let productPrice = null;
     const {
-        productPrice: { status: priceStatus, value: prodPrice }
+        productPrice: { status: priceStatus, value: prodPrice, setValue: setPriceValue }
     } = props;
 
     if (priceStatus === "available") {
@@ -43,7 +43,8 @@ const useGetDynamicPropertyTypes = props => {
         priceColor,
         textTemp,
         onChangePrice,
-        productPrice
+        productPrice,
+        setPriceValue
     };
 };
 
