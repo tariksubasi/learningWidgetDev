@@ -87,6 +87,12 @@
                 <caption>Product Image</caption>
                 <description>Product Description</description>
             </property>
+
+            <!-- 3. Widget Type -->
+            <property key="widgetContent" type="widgets" required="false">
+                <caption>Content</caption>
+                <description>Content Description</description>
+            </property>
         </propertyGroup>
 
         <propertyGroup caption="Dynamic">

@@ -9,7 +9,7 @@ export function LearningWidget(props) {
     console.log("props", props);
 
     const staticWidgetTypes = useGetStaticPropertyTypes(props);
-    const { iconClass, imageURL } = useGetComponentPropertyTypes(props);
+    const { iconClass, imageURL, widgetContent } = useGetComponentPropertyTypes(props);
     const { priceColor, textTemp } = useGetDynamicPropertyTypes(props);
 
     console.warn("iconClass", iconClass);
@@ -34,6 +34,8 @@ export function LearningWidget(props) {
                         <span className={"glyphicon " + iconClass}></span>
                         <h6>Image</h6>
                         <img src={imageURL} width={100} height={100} />
+                        <h6>Widgets</h6>
+                        {widgetContent}
                     </Column>
                     <Column>
                         <h3>Dynamic Widget Types</h3>

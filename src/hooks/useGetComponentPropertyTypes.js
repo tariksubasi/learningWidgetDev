@@ -21,7 +21,11 @@ const useGetComponentPropertyTypes = props => {
         imageURL = productImage.value.uri;
     }
 
-    return { iconClass, imageURL };
+    // widget
+
+    const { widgetContent } = props;
+
+    return { iconClass, imageURL, widgetContent };
 };
 
 export default useGetComponentPropertyTypes;
