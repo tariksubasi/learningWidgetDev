@@ -75,10 +75,17 @@
             <!-- Component Widget Types -->
 
             <!-- 1. Icon -->
-            
+
             <property key="icon" type="icon" required="false">
                 <caption>Icon</caption>
                 <description>Icon Description</description>
+            </property>
+
+            <!-- 2. Image -->
+            
+            <property key="productImage" type="image" required="false">
+                <caption>Product Image</caption>
+                <description>Product Description</description>
             </property>
         </propertyGroup>
     </properties>

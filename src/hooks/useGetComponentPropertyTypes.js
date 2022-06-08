@@ -1,4 +1,5 @@
 const useGetComponentPropertyTypes = props => {
+    // icon
     const { icon } = props;
 
     let iconClass = "";
@@ -11,7 +12,16 @@ const useGetComponentPropertyTypes = props => {
         iconClass = className;
     }
 
-    return { iconClass };
+    // Image
+
+    const { productImage } = props;
+    let imageURL = "";
+
+    if (productImage.status === "available") {
+        imageURL = productImage.value.uri;
+    }
+
+    return { iconClass, imageURL };
 };
 
 export default useGetComponentPropertyTypes;
