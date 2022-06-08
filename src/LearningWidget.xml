@@ -82,10 +82,20 @@
             </property>
 
             <!-- 2. Image -->
-            
+
             <property key="productImage" type="image" required="false">
                 <caption>Product Image</caption>
                 <description>Product Description</description>
+            </property>
+        </propertyGroup>
+
+        <propertyGroup caption="Dynamic">
+            <!-- 1. Expression  -->
+
+            <property key="priceColor" type="expression" defaultValue="'red'">
+                <caption>Expression</caption>
+                <description>Expression Description</description>
+                <returnType type="String" />
             </property>
         </propertyGroup>
     </properties>

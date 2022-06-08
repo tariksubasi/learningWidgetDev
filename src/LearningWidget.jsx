@@ -9,6 +9,9 @@ export function LearningWidget(props) {
 
     const staticWidgetTypes = useGetStaticPropertyTypes(props);
     const { iconClass, imageURL } = useGetComponentPropertyTypes(props);
+    const {
+        priceColor: { value }
+    } = props;
 
     console.warn("iconClass", iconClass);
     return (
@@ -33,7 +36,16 @@ export function LearningWidget(props) {
                         <h6>Image</h6>
                         <img src={imageURL} width={100} height={100} />
                     </Column>
-                    <Column></Column>
+                    <Column>
+                        <h3>Dynamic Widget Types</h3>
+                        <div
+                            style={{
+                                backgroundColor: value
+                            }}
+                        >
+                            Price Color
+                        </div>
+                    </Column>
                 </div>
             </div>
         </>
