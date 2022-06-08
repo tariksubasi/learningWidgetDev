@@ -114,6 +114,13 @@
                     <translation lang="tr_TR">Urun</translation>
                 </translations>
             </property>
+
+            <!-- 3. Action -->
+
+            <property key="changePrice" type="action">
+                <caption>Change Price</caption>
+                <description>Change Price Description</description>
+            </property>
         </propertyGroup>
     </properties>
 </widget>

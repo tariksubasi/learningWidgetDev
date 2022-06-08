@@ -19,9 +19,20 @@ const useGetDynamicPropertyTypes = props => {
         textTemp = prodTemplate;
     }
 
+    // Action
+
+    const { changePrice } = props;
+
+    const onChangePrice = () => {
+        if (changePrice && changePrice.canExecute) {
+            changePrice.execute();
+        }
+    };
+
     return {
         priceColor,
-        textTemp
+        textTemp,
+        onChangePrice
     };
 };
 
