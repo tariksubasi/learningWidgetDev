@@ -1,6 +1,7 @@
 import React, { createElement } from "react";
 import Column from "./components/Column";
 import useGetComponentPropertyTypes from "./hooks/useGetComponentPropertyTypes";
+import useGetDynamicPropertyTypes from "./hooks/useGetDynamicPropertyTypes";
 import useGetStaticPropertyTypes from "./hooks/useGetStaticPropertyTypes";
 import "./ui/LearningWidget.css";
 
@@ -9,9 +10,7 @@ export function LearningWidget(props) {
 
     const staticWidgetTypes = useGetStaticPropertyTypes(props);
     const { iconClass, imageURL } = useGetComponentPropertyTypes(props);
-    const {
-        priceColor: { value }
-    } = props;
+    const { priceColor, textTemp } = useGetDynamicPropertyTypes(props);
 
     console.warn("iconClass", iconClass);
     return (
@@ -40,11 +39,12 @@ export function LearningWidget(props) {
                         <h3>Dynamic Widget Types</h3>
                         <div
                             style={{
-                                backgroundColor: value
+                                backgroundColor: priceColor
                             }}
                         >
                             Price Color
                         </div>
+                        <div>{textTemp}</div>
                     </Column>
                 </div>
             </div>

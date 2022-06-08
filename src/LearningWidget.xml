@@ -97,6 +97,17 @@
                 <description>Expression Description</description>
                 <returnType type="String" />
             </property>
+
+            <!-- 2. Text Template -->
+
+            <property key="textTemp" type="textTemplate">
+                <caption>Product template</caption>
+                <description>Product Template Description</description>
+                <translations>
+                    <translation lang="en_US">Product</translation>
+                    <translation lang="tr_TR">Urun</translation>
+                </translations>
+            </property>
         </propertyGroup>
     </properties>
 </widget>
