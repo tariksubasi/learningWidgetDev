@@ -121,6 +121,17 @@
                 <caption>Change Price</caption>
                 <description>Change Price Description</description>
             </property>
+
+            <!-- 4. Attribute -->
+
+            <property key="productPrice" type="attribute">
+                <caption>Price</caption>
+                <description>Price Description</description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                    <attributeType name="Integer" />
+                </attributeTypes>
+            </property>
         </propertyGroup>
     </properties>
 </widget>

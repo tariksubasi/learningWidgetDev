@@ -29,10 +29,21 @@ const useGetDynamicPropertyTypes = props => {
         }
     };
 
+    // Attribute
+    let productPrice = null;
+    const {
+        productPrice: { status: priceStatus, value: prodPrice }
+    } = props;
+
+    if (priceStatus === "available") {
+        productPrice = parseFloat(prodPrice);
+    }
+
     return {
         priceColor,
         textTemp,
-        onChangePrice
+        onChangePrice,
+        productPrice
     };
 };
 

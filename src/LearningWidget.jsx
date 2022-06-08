@@ -10,7 +10,7 @@ export function LearningWidget(props) {
 
     const staticWidgetTypes = useGetStaticPropertyTypes(props);
     const { iconClass, imageURL, widgetContent } = useGetComponentPropertyTypes(props);
-    const { priceColor, textTemp, onChangePrice } = useGetDynamicPropertyTypes(props);
+    const { priceColor, textTemp, onChangePrice, productPrice } = useGetDynamicPropertyTypes(props);
 
     console.warn("iconClass", iconClass);
     return (
@@ -49,6 +49,8 @@ export function LearningWidget(props) {
                         </div>
                         <h6>Text Template</h6>
                         <div>{textTemp}</div>
+                        <h6>Attribute</h6>
+                        <div>{productPrice}</div>
                         <h6>Action</h6>
                         <button className={"btn btn-primary btn-sm"} onClick={onChangePrice}>
                             Change Price
